@@ -16,18 +16,18 @@
             <div class="header-content">
                 <nav class="navigation">
                     <ul class="navigation-list">
-                        <li class="navigation-list-item"><a>about me</a></li>
-                        <li class="navigation-list-item"><a>contacts</a></li>
-                        <li class="navigation-list-item"><a>scills</a></li>
-                        <li class="navigation-list-item"><a>experience</a></li>
-                        <li class="navigation-list-item"><a>education</a></li>
-                        <li class="navigation-list-item"><a>languages</a></li>
+                        <li class="navigation-list-item"><a href="#about-me">about me</a></li>
+                        <li class="navigation-list-item"><a href="#skills">scills</a></li>
+                        <li class="navigation-list-item"><a href="#education">education</a></li>
+                        <li class="navigation-list-item"><a href="#code-example">code example</a></li>
+                        <li class="navigation-list-item"><a href="#experience">experience</a></li>
+                        <li class="navigation-list-item"><a href="#languages">languages</a></li>
                     </ul>
                 </nav>
-                <div class="greating">
+                <div id="about-me" class="greating">
                     <h1>Hello!<br> I'm Zuleikha<br> Zurabova</h1>
                     <p class="about-me">Hey! My name is Zuleikha and I am a student of RS school. I am taking a front-end development course and plan to work in the field of web development. Now I don't have much programming experience, but I have a great desire to study and achieve my goal.</p>
-                    <button class="download-btn">download-cv</button>
+                    <a class="download-btn" href="pdf/cv-zurabova.pdf" download="">download cv</a>
                 </div>
                 <div class="photo">
                     <img class="avatar" src="img/avatar.svg" alt="avatar">
@@ -38,13 +38,97 @@
                     </ul>
                 </div>
             </div>
-            
         </header>
+
         <main class="container">
+            <div class="section-container">
+                <section id="skills" class="cv-section skills">
+                    <h2 class="section-heading">skills</h2>
+                    <ul class="skills-list">
+                        <li class="skills-list-item">HTML</li>
+                        <li class="skills-list-item">CSS</li>
+                        <li class="skills-list-item">JavaScript basics</li>
+                        <li class="skills-list-item">Git</li>
+                        <li class="skills-list-item">GitHub</li>
+                        <li class="skills-list-item">Adobe Photoshop</li>
+                        <li class="skills-list-item">Figma</li>
+                        <li class="skills-list-item">VS Code</li>
+                    </ul>
+                </section>
 
+                <section id="education" class="cv-section education">
+                    <h2 class="section-heading">education</h2>
+                    <p class="about-education">I graduated from the College of Foreign Languages with a degree in Pedagogy of Additional Education. I studied English and Japanese.</p>
+                </section>
+            </div>
+        
+            <section id="code-example" class="cv-section code-example">
+                <h2 class="section-heading">code example</h2>
+                <p class="task-description">
+                    You need to cast the whole array to the correct type.<br>
+
+                    Create the function that takes as a parameter a sequence of numbers represented as strings and outputs a sequence of numbers.<br>
+
+                    ie: ["1", "2", "3"] to [1, 2, 3]<br>
+
+                    Note that you can receive floats as well.<br>
+                </p>
+
+                <pre class="code">
+        
+                <span class="code-span">function</span> toNumberArray(stringarray) <span class="code-span">{</span>
+                    <span class="code-span">return</span> stringarray.map(parseFloat);
+                    <span class="code-span">}</span>
+        
+                    toNumberArray(<span class="code-span">["1", "2", "3"]</span>);
+                        </pre>
+            </section>
+        
+            <section id="experience" class="cv-section experience">
+                <h2 class="section-heading">experience</h2>
+                <p>I have no experience as a web developer as I am a beginner. But, recently I have been working on the layout of educational <b>projects</b>:</p>
+                <div class="project-item">
+                    <div class="project-task">
+                        <h3 class="project-heading"><a href="https://github.com/Zuleikhan/rsschool-cv">CV</a></h3>
+                        <p class="about-project">The task is to create a CV using markdown markup, and then layout it using html and css.</p>
+                        <ul class="technologies-list">
+                            <li class="technologies-item">HtML</li>
+                            <li class="technologies-item">CSS</li>
+                        </ul>
+                        <p class="read-more"><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/cv/cv.md">Read more about the task</a></p>
+                    </div>
+                    <a class="project-link" href="https://github.com/Zuleikhan/rsschool-cv">сurriculum vitae</a>
+                </div>
+            </section>
+        
+            <section id="languages" class="cv-section languages">
+                <h2 class="section-heading">languages</h2>
+                <ul class="languages-list">
+                    <li class="languages-list-item russian">Russian: native</li>
+                    <li class="languages-list-item english">English: intermediate</li>
+                    <li class="languages-list-item japanese">Japanese: elementary</li>
+                </ul>
+            </section>
+        
         </main>
-        <footer class="footer">
 
+        <footer class="main-footer">
+            <div class="container">
+                <section class="contacnts">
+                    <h2 class="visually-hidden">My contacts</h2>
+                    <ul class="social-list">
+                        <li class="social-list-item"><a href="https://www.linkedin.com/in/zuleikha-zu"><img src="img/linkedin.svg" alt="linkedin"></a></li>
+                        <li class="social-list-item"><a href="https://github.com/Zuleikhan"><img src="img/github.svg" alt="github"></a></li>
+                        <li class="social-list-item"><a href="https://t.me/zuleikha_zu"><img src="img/telegram.svg" alt="telegram"></a></li>
+                    </ul>
+                </section>
+
+                <p class="year">2022<br> Zuleikha Zurabova</p>
+
+                <div class="copyright">
+                    <a href="https://rs.school/js/"><img class="rss-logo" src="img/rss-logo.svg" alt="логотип rolling scopes school"></a>
+                </div>
+            </div>
         </footer>
         
     </div>

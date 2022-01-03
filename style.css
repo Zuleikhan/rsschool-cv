@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     box-sizing: border-box;
@@ -13,8 +17,26 @@ body {
     background-color: #fff;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .wrapper {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
     box-shadow: 0 5px 15px rgb(0 1 1 / 20%);
 }
@@ -26,7 +48,7 @@ body {
     height: 700px;;
     margin-left: auto;
     margin-right: 0;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 
     font-weight: 500;
     color: #000;
@@ -35,7 +57,7 @@ body {
 
 .navigation-list {
     width: 100%;
-    display:flex;
+
     justify-content: center;
     padding: 0;
     margin: 30px 0;
@@ -50,18 +72,20 @@ body {
     list-style: none;
 }
 
-.navigation-list-item {
+.navigation-list-item a {
+    text-decoration: none;
+    color: inherit;
     padding: 15px;
 }
 
-.navigation-list-item:hover {
+.navigation-list-item a:hover {
     background-color: #FFE8E8;
 }
 
 .header-content {
     position: relative;
     width: 1050px;
-    height: 625px;
+    height: 600px;
     background-color: #F6F6F6;
 
 }
@@ -102,13 +126,17 @@ body {
 }
 
 .download-btn {
-    width: 200px;
+    display: block;
+    width: 220px;
     height: 80px;
     padding: 10px;
     border: none;
 
-    font: inherit;
+    text-decoration: none;
+    color: #6D6D6D;
+    line-height: 60px;
     letter-spacing: 6px;
+    text-align: center;
     text-transform: uppercase;
 
     background-color: #FFE8E8;
@@ -127,3 +155,185 @@ body {
     cursor: pointer;
 }
 
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.cv-section {
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills {
+    width: 460px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-list-item {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #EDEDED;
+}
+
+.education {
+    width: 380px;
+}
+
+.about-education {
+    margin: 0;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.project-task {
+    width: 340px;
+}
+
+.read-more a {
+    text-decoration: none;
+    border-bottom: 1px solid #6d6d6d75;
+    color: #6d6d6d75;
+}
+
+.technologies-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.technologies-item {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #EDEDED;
+}
+
+.project-heading {
+    margin: 0;
+}
+
+.project-heading a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-link {
+    text-decoration: none;
+    display: block;
+    width: 520px;
+    height: 300px;
+    background-color: #F6F6F6;
+    color: inherit;
+    font: inherit;
+    font-size: 36px;
+    line-height: 300px;
+    text-align: center;
+}
+
+.project-link:hover {
+    color: transparent;
+    display: block;
+    background: url('img/cv.png');
+    background-size: 520px;
+    background-repeat: no-repeat;
+}
+
+.task-description {
+    margin: 0;
+    margin: 40px 0;
+    padding-left: 15px;
+    border-left: 2px solid #999999;
+}
+
+
+.code {
+    background-color: #f6f6f6;
+    color: #999999;
+
+    font-size: 22px;
+    text-transform: none;
+}
+
+.code-span {
+    font-weight: bold;
+    color: #ffb1b1
+}
+
+.main-footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    background-color: #D8D8D8;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year {
+    text-align: center;
+}
+
+.rss-logo {
+    width: 150px;
+}
+
+.languages-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 18px;
+}
+
+
+.languages-list-item {
+    border: 2px solid #F6F6F6;
+    border-radius: 65px;
+    padding: 15px;
+    display: block;
+    background: url('img/lang-bg.png') no-repeat;
+}
+
+.russian {
+    background-size: cover;
+}
+
+.english {
+    background-size: 50% 100%;
+}
+
+.japanese {
+    background-size: 30% 100%;
+
+}
